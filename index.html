@@ -1,0 +1,52 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Divulga — Central de campanhas</title>
+  <meta name="description" content="Crie campanhas para Instagram, Facebook, LinkedIn e TikTok com IA." />
+  <link rel="stylesheet" href="/style.css" />
+</head>
+<body>
+  <div class="app">
+    <aside>
+      <div class="logo">divulga<span>.</span></div>
+      <div class="workspace"><b>M</b><div><strong>Meu espaço</strong><small>Central de divulgação</small></div></div>
+      <nav><p>PLANEJAMENTO</p><a class="active">✦ Criar campanha</a><a>▦ Campanhas</a><a>◉ Conexões</a></nav>
+      <div class="ai-state"><span id="dot"></span><div><strong>IA de conteúdo</strong><small id="aiState">Verificando…</small></div></div>
+    </aside>
+    <main>
+      <header><span>Meu espaço / <b>Criar campanha</b></span><em id="badge">Verificando IA</em></header>
+      <section class="hero"><div><label>SUA MARCA, EM TODOS OS CANAIS</label><h1>Crie sua próxima campanha</h1><p>Um briefing. Conteúdo adaptado para cada rede.</p></div><button id="example" class="secondary">Usar um exemplo</button></section>
+      <div class="layout">
+        <section class="card form">
+          <div class="section-title"><i>1</i><div><b>Briefing</b><small>Conte o que vamos divulgar</small></div></div>
+          <div class="row"><label>Nome da campanha<input id="title" placeholder="Ex.: Lançamento de outubro"></label><label>Marca ou negócio<input id="brand" placeholder="Sua marca"></label></div>
+          <label>O que você quer comunicar?<textarea id="brief" rows="6" placeholder="Descreva a oferta, produto, contexto, diferenciais e chamada para ação."></textarea></label>
+          <label>Público-alvo <small>(opcional)</small><input id="audience" placeholder="Quem você quer alcançar?"></label>
+          <div class="row"><label>Objetivo<select id="goal"><option>Atrair clientes</option><option>Divulgar uma oferta</option><option>Fortalecer a marca</option></select></label><label>Tom de voz<select id="tone"><option>Próximo e amigável</option><option>Profissional</option><option>Direto e objetivo</option></select></label></div>
+          <fieldset><legend>Onde você quer aparecer?</legend>
+            <label class="check"><input type="checkbox" value="Instagram" checked> Instagram</label>
+            <label class="check"><input type="checkbox" value="Facebook"> Facebook</label>
+            <label class="check"><input type="checkbox" value="LinkedIn"> LinkedIn</label>
+            <label class="check"><input type="checkbox" value="TikTok"> TikTok</label>
+          </fieldset>
+          <div id="msg"></div>
+          <div class="actions"><button id="save" class="secondary">Salvar rascunho</button><button id="generate">✦ Gerar com IA</button></div>
+        </section>
+        <section class="card preview">
+          <div class="preview-head"><div><b>Prévia do conteúdo</b><small>Revise antes de publicar</small></div><button id="copy" class="ghost">Copiar</button></div>
+          <div id="tabs" class="tabs"></div>
+          <div class="phone">
+            <div class="post-head"><b>M</b><div><strong id="previewBrand">Sua marca</strong><small id="previewNetwork">Instagram · Prévia</small></div></div>
+            <div class="visual"><span>◈</span><b id="previewTitle">Sua próxima publicação começa aqui</b></div>
+            <div id="previewText" class="post-text">Preencha o briefing e clique em “Gerar com IA”.</div>
+            <div id="scriptBox" class="script hidden"><strong>Roteiro TikTok</strong><p id="scriptText"></p></div>
+          </div>
+        </section>
+      </div>
+    </main>
+  </div>
+  <script src="/app.js"></script>
+</body>
+</html>
